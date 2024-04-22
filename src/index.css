@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* fonts */
 @font-face {
     font-family: 'Ubuntu-Bold';
@@ -35,7 +39,7 @@
     border: none;
     outline: none;
 }
-/* colors */
+/* ----------------------------- Colors --------------------------- */
 :root{
     /* Primary colors */
     --primary-100: hsl(213, 96%, 18%);
@@ -119,4 +123,9 @@
 }
 .natural-500--bg{
     background: var(--natural-500);
+}
+/* --------------------------------- style --------------------------------- */
+
+body{
+    font-family: 'Ubuntu-regular';
 }

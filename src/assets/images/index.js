@@ -1,0 +1,7 @@
+export { default as bgSliderDesktop } from './bg-sidebar-desktop.svg'
+export { default as bgSlideMobile } from './bg-sidebar-mobile.svg'
+export { default as advanceIcon } from './icon-advance.svg'
+export { default as arcadeIcon } from './icon-arcade.svg'
+export { default as checkmarkIcon } from './icon-checkmark.svg'
+export { default as proIcon } from './icon-pro.svg'
+export { default as thankYouIcon } from './icon-thank-you.svg'

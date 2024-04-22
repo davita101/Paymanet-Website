@@ -1,9 +1,13 @@
+import { AddOns, SelectPlan, Summary, YourInfo } from "./components"
 
 function App() {
 
   return (
-    <div>
-
+    <div >
+      <YourInfo />
+      <SelectPlan />
+      <AddOns />
+      <Summary />
     </div>
   )
 }
