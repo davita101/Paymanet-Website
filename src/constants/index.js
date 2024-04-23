@@ -1,4 +1,30 @@
 import { advanceIcon, arcadeIcon, checkmarkIcon, proIcon } from "../assets/images"
+export const sideBarText = [
+    {
+        number: 1,
+        step: 'step 1',
+        heading: 'YOUR INFO',
+        path: '/'
+    },
+    {
+        number: 2,
+        step: 'step 2',
+        heading: 'SELECT PLAN',
+        path: '/selectPlans'
+    },
+    {
+        number: 3,
+        step: 'step 3',
+        heading: 'ADD-ONS',
+        path: '/addons'
+    },
+    {
+        number: 4,
+        step: 'step 4',
+        heading: 'SUMMARY',
+        path: '/summary'
+    }
+]
 export const yourInfoText = [
     {
         heading: 'Personal info',

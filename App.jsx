@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom"
-import { Hero } from "./components"
+import { Container } from "./components"
 
 function App() {
 
   return (
-    <Hero />
+    <Container />
   )
 }
 

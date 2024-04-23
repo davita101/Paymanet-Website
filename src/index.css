@@ -124,8 +124,34 @@
 .natural-500--bg{
     background: var(--natural-500);
 }
+
+
+
+/* classes */
+.main--border{
+    border: 1px solid var(--natural-500);
+}
+.active {
+    background: var(--primary-500);
+    border: 1px solid var(--primary-500);
+    color: var(--primary-100);
+}
+.active-hover:hover {
+    background: var(--primary-500);
+    border: 1px solid var(--primary-500);
+    color: var(--primary-100);
+}
+
+
 /* --------------------------------- style --------------------------------- */
 
 body{
     font-family: 'Ubuntu-regular';
+    background: var(--primary-500);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    zoom: 1;
 }
+
