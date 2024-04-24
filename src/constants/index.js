@@ -44,12 +44,14 @@ export const yourInfoText = [
         type: 'email',
         name: 'email',
         label: 'Email Address',
+        redLine: 'Enter full Email',
         placeholder: 'e.g. stephenking@lorem.com'
     },
     {
         type: 'number',
         name: 'number',
         label: 'Phone Number',
+        redLine: 'Enter full Phone Number',
         placeholder: 'e.g. +1 234 567 890'
     }
 ]

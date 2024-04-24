@@ -1,12 +1,32 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { yourInfoText } from '../constants';
-import { Link } from 'react-router-dom';
 
 import { Context } from './Hero';
+import { Button } from './index';
 
 function YourInfo() {
 
     let [number, setNumber] = useContext(Context)
+    const [inputType, setInputType] = useState('')
+
+    const [formData, setFormData] = useState(() => {
+        // Retrieve form data from local storage when the component mounts
+        const savedFormData = localStorage.getItem('formData');
+        return savedFormData ? JSON.parse(savedFormData) : {};
+    });
+
+    const handelChange = (e) => {
+        const { name, value } = e.target
+        if (value.length < 16) {
+            setFormData({ ...formData, [name]: value })
+        }
+    }
+
+    useEffect(() => {
+        // Save form data to local storage whenever it changes
+        localStorage.setItem('formData', JSON.stringify(formData));
+    }, [formData]);
+    console.log(formData)
     return (
         <div className='sm:p-0 p-[1rem] w-full flex flex-col'>
             <h2 className='header--hero'>{yourInfoText[0].heading}</h2>
@@ -15,20 +35,27 @@ function YourInfo() {
             <form action="/">
                 {yourInfoText.map((item, index) => (
                     index != 0 && (<div key={index}>
-                        <label htmlFor={item.name}>{item.label}</label>
+                        <div className='flex justify-between'>
+                            <label className='primary-100--text font-bold text-[.8em]' htmlFor={item.name}>{item.label}</label>
+                            {inputType == '' && (<label className='primary-100--text font-bold text-[.8em]' htmlFor={`red${item.name}`}>{item.redLine}</label>)}
+                        </div>
                         <div className='my-[.2rem]' />
-                        <input className='border border-gray-300 w-full p-[.5rem] rounded-lg' type={item.type} name={item.name} placeholder={item.placeholder} id={`y${item.name} 
+                        <input
+                            className='border primary-100--text border-1 hover:border-purple-500 cursor-pointer border-gray-300 w-full p-[.5rem] rounded-lg header--hero--bold'
+                            onChange={handelChange}
+                            type={item.type}
+                            name={item.name}
+                            value={formData[item.name]}
+                            maxLength={20}
+                            max={16}
+                            placeholder={item.placeholder} id={`y${item.name} 
+                            autoComplete
                             `} />
                         <div className='my-[.5rem]' />
                     </div>)
                 ))}
+                <Button inputType={inputType} />
             </form>
-            <div className='mt-[4rem] flex justify-between'>
-                <div />
-                <Link to='/selectPlans'>
-                    <button onClick={() => setNumber(number + 1)} className='value next--btn' >Next Step</button>
-                </Link>
-            </div>
         </ div>
     );
 }

@@ -1,16 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SideBar, AddOns, SelectPlan, Summary, YourInfo } from '.'
-import { Route, Routes } from 'react-router'
-
+import { Route, Routes, useNavigate } from 'react-router-dom'
+import { sideBarText } from '../constants'
 export const Context = React.createContext()
-
 function Container() {
+    const navigate = useNavigate()
 
-    const [number, setNumber] = useState(0)
+    useEffect(() => {
+        navigate('/')
+    }, [])
 
+    let [number, setNumber] = useState(sideBarText[0].index)
     return (
         <Context.Provider value={[number, setNumber]}>
-            <div className='flex sm:flex-row flex-col sm:justify-center items-center sm:w-[auto] w-[100vw] sm:h-[auto] h-[100vh] rounded-xl sm:gap-[4rem] gap-0 natural-500--bg p-[1rem]'>
+            <div className=' flex sm:flex-row sm:b flex-col sm:justify-center items-center sm:w-[auto] w-[100vw] sm:h-[auto] h-[100vh] rounded-xl sm:gap-[4rem] gap-0 sm:bg-white natural-300--bg p-[1rem]  shadow-lg'>
                 <SideBar />
                 <div className='relative natural-500--bg sm:w-[auto] w-full rounded-xl flex justify-center items-center'>
                     <Routes>
@@ -20,6 +23,7 @@ function Container() {
                         <Route path='/summary' element={<Summary />} />
                     </Routes>
                 </div>
+
             </div>
         </Context.Provider>
     )

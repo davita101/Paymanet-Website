@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom'
 
 import { Context } from './Hero'
 function SideBar() {
-    const [number, setNumber] = useContext(Context)
-
+    let [number, setNumber] = useContext(Context)
     const [hover, setHover] = useState(true)
     const [numberHover, setNumberHover] = useState(null)
     return (
-        <div className='relative bg--img flex flex-col sm:items-start items-center gap-[1rem] sm:w-[auto] w-[100vw] sm:h-[27rem] p-[1.5rem] '>
+        <div className='relative flex flex-col sm:items-start items-center gap-[1rem] sm:w-[auto] w-[100vw] sm:h-[27rem] p-[1.5rem] '>
             <div className='w-[10rem]'>
                 <img className='top-0  left-0 absolute sm:block hidden z-[1] ' src={bgSlideBarDesktop} alt="Sidebar Desktop" title='Sidebar Desktop' />
                 <img className='absolute left-0 top-[-1rem] w-[100%] sm:hidden block' src={bgSlideBarMobile} alt="Sidebar Mobile" title='Sidebar Mobile' />
