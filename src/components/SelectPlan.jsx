@@ -21,10 +21,10 @@ function SelectPlan() {
         // Save clickIndex to local storage whenever it changes
         localStorage.setItem('clickIndex', JSON.stringify(clickIndex));
     }, [clickIndex]);
-    console.log(clickIndex)
 
     return (
-        <form className={`flex ${switcher ? 'gap-3' : 'gap-[1.2rem]'} flex-col w-full sm:p-0 p-[1rem]`}>
+
+        <form className={`flex ${switcher ? 'gap-2' : 'gap-[1.2rem]'} flex-col w-full sm:p-0 p-[1rem]`}>
             <div>
                 <h2 className='header--hero'>{selectPlanText[0].heading}</h2>
                 <p className='paragraph--hero'>{selectPlanText[0].paragraph}</p>
@@ -68,7 +68,6 @@ function SelectPlan() {
 
             </div>
             <Button />
-
         </form >
     )
 }

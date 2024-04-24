@@ -35,9 +35,10 @@ export const yourInfoText = [
         paragraph: 'Please proved your name, email address and phone number.'
     },
     {
-        type: 'email',
+        type: 'name',
         name: 'name',
         label: 'Name',
+        redLine: 'Enter Name',
         placeholder: 'e.g. Stephen King'
     },
     {
@@ -51,7 +52,7 @@ export const yourInfoText = [
         type: 'number',
         name: 'number',
         label: 'Phone Number',
-        redLine: 'Enter full Phone Number',
+        redLine: 'Enter full Phone Number ',
         placeholder: 'e.g. +1 234 567 890'
     }
 ]

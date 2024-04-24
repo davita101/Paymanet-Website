@@ -135,19 +135,25 @@
     background: var(--primary-500);
     border: 1px solid var(--primary-500);
     color: var(--primary-100);
+    border: 2px solid var(--primary-200);
 }
 .active-hover:hover {
     background: var(--primary-500);
     border: 1px solid var(--primary-500);
     color: var(--primary-100);
+    
 }
 
 .select--active {
     border: 1px solid var(--natural-200);
     background-color: var(--natural-300);    
+    border: 1px solid var(--primary-200);
+
 }
 .select--active--hover:hover {
-    border: 1px solid var(--natural-200);
+    border: 1px solid var(--primary-200);
+
+    
     background: none;
 }
 
@@ -155,7 +161,7 @@
 .header--hero{
     color: var(--primary-100);
     font-weight: bold;
-    font-size: 2em;
+    font-size: 2rem;
 }
 .paragraph--hero{
     color: var(--natural-100);
@@ -182,6 +188,9 @@
     padding: .5em 1rem;
     color: var(--primary-500);
 }
+
+
+.border--hove
 /* --------------------------------- style --------------------------------- */
 
 body{
