@@ -24,7 +24,7 @@ function SelectPlan() {
 
     return (
 
-        <form className={`flex ${switcher ? 'gap-2' : 'gap-[1.2rem]'} flex-col w-full sm:p-0 p-[1rem]`}>
+        <form className={`flex ${switcher ? 'gap-2' : 'gap-[1.2rem]'} flex-col h-full  w-full sm:p-0 p-[1rem]`}>
             <div>
                 <h2 className='header--hero'>{selectPlanText[0].heading}</h2>
                 <p className='paragraph--hero'>{selectPlanText[0].paragraph}</p>

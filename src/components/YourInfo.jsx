@@ -19,10 +19,10 @@ function YourInfo() {
 
     useEffect(() => {
         localStorage.setItem('formData', JSON.stringify(formData));
-        const isCorrectForm = formData.name && (formData.email.length > 6) && formData.number
+        const isCorrectForm = formData.name && formData.email && formData.number
         setSubmitEr(isCorrectForm)
     }, [formData, setSubmitEr]);
-    console.log()
+    console.log(submitEr)
     return (
         <div className='sm:p-0 p-[1rem]  w-full flex flex-col  justify-center'>
             <h2 className='header--hero'>{yourInfoText[0].heading}</h2>
@@ -46,7 +46,7 @@ function YourInfo() {
                             </div>
                             <div className='my-[.2rem]' />
                             <input
-                                className='border primary-100--text border-1 hover:border-purple-500 cursor-pointer border-gray-300 w-full p-[.5rem] rounded-lg header--hero--bold'
+                                className=' active: border primary-100--text border-1 hover:border-purple-500 cursor-pointer border-gray-300 w-full p-[.5rem] rounded-lg header--hero--bold'
                                 onChange={handelChange}
                                 type={item.type}
                                 name={item.name}

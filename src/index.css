@@ -135,26 +135,23 @@
     background: var(--primary-500);
     border: 1px solid var(--primary-500);
     color: var(--primary-100);
-    border: 2px solid var(--primary-200);
 }
 .active-hover:hover {
     background: var(--primary-500);
     border: 1px solid var(--primary-500);
     color: var(--primary-100);
-    
 }
 
 .select--active {
     border: 1px solid var(--natural-200);
-    background-color: var(--natural-300);    
-    border: 1px solid var(--primary-200);
-
+    background-color: var(--natural-300);
+    border: 1px solid var(--primary-200);    
 }
 .select--active--hover:hover {
-    border: 1px solid var(--primary-200);
-
-    
+    border: 1px solid var(--natural-200);
     background: none;
+    border: 1px solid var(--primary-200);    
+
 }
 
 
@@ -188,9 +185,6 @@
     padding: .5em 1rem;
     color: var(--primary-500);
 }
-
-
-.border--hove
 /* --------------------------------- style --------------------------------- */
 
 body{
@@ -201,9 +195,4 @@ body{
     align-items: center;
     justify-content: center;
     zoom: 1;
-}
-
-input{
-    border: inherit;
-    border: 1px solid black;
 }

@@ -6,7 +6,7 @@ import { sideBarText } from '../constants'
 function Button(props) {
     let [number, setNumber, submitEr, setSubmitEr] = useContext(Context)
     return (
-        <div className='absolute bottom-[-2.5rem] w-full'>
+        <div className='absolute bottom-[-2.5rem] w-full '>
             {/* DESKTOP */}
             <div className={`flex items-center w-full justify-between
              ${number == 0 ? ' justify-end' : ' justify-between '}

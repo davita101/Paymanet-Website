@@ -14,9 +14,9 @@ function Container() {
     let [submitEr, setSubmitEr] = useState(undefined)
     return (
         <Context.Provider value={[number, setNumber, submitEr, setSubmitEr]}>
-            <div className=' flex sm:flex-row sm:b flex-col sm:justify-center items-center sm:w-[auto] w-[100vw] sm:h-[auto]  h-[100vh] rounded-xl sm:gap-[4rem] gap-0 sm:bg-white natural-300--bg p-[1rem]  shadow-lg'>
+            <div className=' flex sm:flex-row sm:b flex-col sm:justify-center items-center sm:w-[auto] w-[100vw] sm:h-[auto]  h-[100vh] rounded-xl sm:gap-[4rem] gap-0 sm:bg-white natural-300--bg p-[1rem]  shadow-lg sm:p-[1rem]'>
                 <SideBar />
-                <div className='relative natural-500--bg h-[24rem] sm:w-[25rem] w-full rounded-xl flex justify-center items-center sm:pb-[4rem] p-0'>
+                <div className='relative natural-500--bg sm:h-[24rem] h-[auto] sm:w-[25rem] w-full rounded-xl flex justify-center items-center sm:pb-[4rem] p-0'>
                     <Routes>
                         <Route path='/' exeat element={<YourInfo />} />
                         <Route path='/selectPlans' element={<SelectPlan />} />

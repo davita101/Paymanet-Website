@@ -3,7 +3,9 @@ import React from 'react'
 function AddOns() {
     return (
         <div>
-            AddOns
+            <form action="/">
+                <h2>asdasdasd</h2>
+            </form>
         </div>
     )
 }
