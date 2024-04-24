@@ -2,7 +2,7 @@ import React from 'react'
 
 function Summary() {
     return (
-        <div>
+        <div className=' sm'>
             Summary
         </div>
     )

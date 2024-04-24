@@ -18,15 +18,15 @@
 
 /* --------------------------- Util ------------------------- */
 /* fonts */
-.ubuntu--bold{
+.header--hero--bold{
     font-family: 'Ubuntu-Bold';
     font-weight: bold;
 }
-.ubuntu--Medium{
+.ubuntu--medium{
     font-family: 'Ubuntu-Medium';
     font-weight: medium;
 }
-.ubuntu--Regular{
+.ubuntu--regular{
     font-family: 'Ubuntu-Regular';
 }
 
@@ -36,7 +36,6 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    border: none;
     outline: none;
 }
 /* ----------------------------- Colors --------------------------- */
@@ -58,6 +57,7 @@
 
 /* Primary color class */
 /* text color */
+
 .primary-100--text{
     color: var(--primary-100);
 }
@@ -142,7 +142,47 @@
     color: var(--primary-100);
 }
 
+.select--active {
+    border: 1px solid var(--natural-200);
+    background-color: var(--natural-300);    
+}
+.select--active--hover:hover {
+    border: 1px solid var(--natural-200);
+    background: none;
+}
 
+
+.header--hero{
+    color: var(--primary-100);
+    font-weight: bold;
+    font-size: 2em;
+}
+.paragraph--hero{
+    color: var(--natural-100);
+    font-size: .9em;
+}
+
+@media (max-width: 640px) {
+    .header--hero{
+        font-size: 1.5em;
+    }
+}
+
+
+/* ------------------------------ Btn ---------------- */
+.next--btn{
+    background: var(--primary-100);
+    padding: .5em 1rem;
+    color: var(--primary-500);
+    border-radius: .5rem;
+    transition: all 300ms ease;
+}
+.next--btn:hover{
+    background: var(--primary-200);
+    padding: .5em 1rem;
+    color: var(--primary-500);
+    border-radius: .5rem;
+}
 /* --------------------------------- style --------------------------------- */
 
 body{
@@ -155,3 +195,7 @@ body{
     zoom: 1;
 }
 
+input{
+    border: inherit;
+    border: 1px solid black;
+}

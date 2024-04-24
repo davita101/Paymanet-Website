@@ -1,22 +1,24 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { sideBarText } from '../constants'
 import { bgSlideBarDesktop, bgSlideBarMobile } from '../assets/images'
 import { Link } from 'react-router-dom'
+
+import { Context } from './Hero'
 function SideBar() {
+    const [number, setNumber] = useContext(Context)
+
     const [hover, setHover] = useState(true)
-    const [number, setNumber] = useState(0)
-    const [numberHover, setNumberHover] = useState(0)
+    const [numberHover, setNumberHover] = useState(null)
     return (
         <div className='relative bg--img flex flex-col sm:items-start items-center gap-[1rem] sm:w-[auto] w-[100vw] sm:h-[27rem] p-[1.5rem] '>
-            <div>
-                <img className='top-0  left-0 absolute sm:block hidden z-[1]' src={bgSlideBarDesktop} alt="Sidebar Desktop" title='Sidebar Desktop' />
+            <div className='w-[10rem]'>
+                <img className='top-0  left-0 absolute sm:block hidden z-[1] ' src={bgSlideBarDesktop} alt="Sidebar Desktop" title='Sidebar Desktop' />
                 <img className='absolute left-0 top-[-1rem] w-[100%] sm:hidden block' src={bgSlideBarMobile} alt="Sidebar Mobile" title='Sidebar Mobile' />
             </div>
             {/* DESKTOP */}
             {sideBarText.map((item, index) => (
                 <Link className='sm:flex hidden ' key={index} to={item.path}>
-                    <div onMouseOver={() => { setHover(true), setNumberHover(index) }} onMouseLeave={() => setHover(false)} onClick={() => setNumber(index)} className='relative z-[2]
-                sm:flex hidden transitions-all pl-[1.5rem]  items-center gap-[1.5rem] cursor-pointer'>
+                    <div onMouseOver={() => { setHover(true), setNumberHover(index) }} onMouseLeave={() => setHover(false)} onClick={() => setNumber(index)} className='relative z-[2] sm:flex hidden transitions-all  items-center gap-[1.5rem] cursor-pointer'>
                         <div className={` main--border w-7 h-7 cursor-pointer text-[.7em] cursor- flex justify-center items-center rounded-full transition-all ${(numberHover == index && hover) && 'active'} ${number == index ? 'active' : 'active-hover natural-500--text'}`}>
                             <span >{item.number}</span>
                         </div>

@@ -1,24 +1,28 @@
 import { advanceIcon, arcadeIcon, checkmarkIcon, proIcon } from "../assets/images"
 export const sideBarText = [
     {
+        index: 0,
         number: 1,
         step: 'step 1',
         heading: 'YOUR INFO',
         path: '/'
     },
     {
+        index: 1,
         number: 2,
         step: 'step 2',
         heading: 'SELECT PLAN',
         path: '/selectPlans'
     },
     {
+        index: 2,
         number: 3,
         step: 'step 3',
         heading: 'ADD-ONS',
         path: '/addons'
     },
     {
+        index: 3,
         number: 4,
         step: 'step 4',
         heading: 'SUMMARY',
@@ -27,20 +31,23 @@ export const sideBarText = [
 ]
 export const yourInfoText = [
     {
-        heading: 'Personal info',
+        heading: "Personal info",
         paragraph: 'Please proved your name, email address and phone number.'
     },
     {
+        type: 'email',
         name: 'name',
         label: 'Name',
         placeholder: 'e.g. Stephen King'
     },
     {
+        type: 'email',
         name: 'email',
         label: 'Email Address',
         placeholder: 'e.g. stephenking@lorem.com'
     },
     {
+        type: 'number',
         name: 'number',
         label: 'Phone Number',
         placeholder: 'e.g. +1 234 567 890'
