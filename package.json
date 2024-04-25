@@ -1,11 +1,11 @@
 {
-  "homepage": "http://davita101.github.io/Payment-Website/",
+  "homepage": "https://davita101.github.io/Payment-Website/",
   "name": "payment-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run dev",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
