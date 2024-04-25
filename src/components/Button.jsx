@@ -1,10 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Context } from './Hero'
 import { Link } from 'react-router-dom'
 import { sideBarText } from '../constants'
 
 function Button(props) {
-    let [number, setNumber, submitEr, setSubmitEr] = useContext(Context)
+    let [summary1, setSummary1, summary, setSummary, switcher, setSwitcher, number, setNumber, submitEr, setSubmitEr] = useContext(Context)
+    console.log(number)
+    const [click, setClick] = useState(0)
+    console.log(sideBarText[1].path)
+
+    console.log(number)
     return (
         <div className='absolute bottom-[-2.5rem] w-full '>
             {/* DESKTOP */}
@@ -19,11 +24,12 @@ function Button(props) {
                             className=' ubuntu--bold font-bold transition-all natural-200--text hover:text-blue-900 ' >Go Back</button>
                     </Link>)}
                 {<div />}
-                <Link to={submitEr ? sideBarText[number + 1].path : '/'}>
+                <Link onClick={() => setNumber(number + 1)}
+                    to={submitEr ? (sideBarText[number + 1]?.path) : '/summary'}>
                     <button
                         type='submit'
-                        onClick={() => setNumber(submitEr ? number + 1 : 0)}
-                        className=' next--btn' >Next Step</button>
+                        onClick={() => setNumber((submitEr && number + 1))}
+                        className=' next--btn' >{`${number < 3 ? 'Next Step' : 'Confirm'}`}</button>
                 </Link>
             </div>
 

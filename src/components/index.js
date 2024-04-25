@@ -1,5 +1,6 @@
 export { default as AddOns } from './AddOns'
 export { default as Button } from './Button'
+export { default as Confirm } from './Confirm'
 export { default as Hero } from './Hero'
 export { default as SelectPlan } from './SelectPlan'
 export { default as SideBar } from './SideBar'

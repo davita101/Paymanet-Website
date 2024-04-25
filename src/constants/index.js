@@ -1,4 +1,4 @@
-import { advanceIcon, arcadeIcon, checkmarkIcon, proIcon } from "../assets/images"
+import { advanceIcon, arcadeIcon, checkmarkIcon, proIcon, thankYouIcon } from "../assets/images"
 export const sideBarText = [
     {
         index: 0,
@@ -27,7 +27,15 @@ export const sideBarText = [
         step: 'step 4',
         heading: 'SUMMARY',
         path: '/summary'
+    },
+    {
+        index: 3,
+        number: 4,
+        step: 'step 4',
+        heading: 'SUMMARY',
+        path: '/confirm'
     }
+
 ]
 export const yourInfoText = [
     {
@@ -64,13 +72,16 @@ export const selectPlanText = [
         yearlyGift: '2 month free'
     },
     {
+        index: 0,
         icon: arcadeIcon,
         text: 'Arcade',
         title: 'Arcade icon',
         monthlyPay: 9,
+        path: '/',
         yearlyPay: 90
     },
     {
+        index: 2,
         icon: advanceIcon,
         title: 'Advance icon',
         text: 'Advance',
@@ -78,6 +89,8 @@ export const selectPlanText = [
         yearlyPay: 120
     },
     {
+        index: 2,
+
         icon: proIcon,
         title: 'Pro icon',
         text: 'Pro',
@@ -92,18 +105,21 @@ export const addOnsText = [
         paragraph: 'Add-ons help enhance your gaming experience.',
     },
     {
+        name: 'service',
         heading: 'Online service',
         paragraph: 'Access to multiplayer games',
         monthlyPay: 1,
         yearlyPay: 10,
     },
     {
+        name: 'storage',
         heading: 'Larger storage',
         paragraph: 'Extra 1TB of cloud save',
         monthlyPay: 2,
         yearlyPay: 20,
     },
     {
+        name: 'profile',
         heading: 'Customizable Profile',
         paragraph: 'Custom theme on your profile',
         monthlyPay: 3,
@@ -118,14 +134,14 @@ export const summaryText = [
         paragraph: 'Double-check everything looks OK before confirming.',
     }
 ]
-export const thankYouText = [
+export const confirmText = [
     {
-        icon: checkmarkIcon,
-        title: 'Checkmark icon',
+        icon: thankYouIcon,
+        title: 'thankYou icon',
         heading: 'Thank you!',
         paragraph: `Thanks for confirming your subscription! We hope you have fun 
         using our platform. If you ever need support, please feel free 
-        to email us at support@loremgaming.com.`
+        to email us at grdzelishvilidavti@gmail.com.`
     }
 
 ]

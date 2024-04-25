@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 import { Context } from './Hero'
 function SideBar() {
-    let [number, setNumber] = useContext(Context)
+    let [summary1, setSummary1, summary, setSummary, switcher, setSwitcher, number, setNumber, submitEr, setSubmitEr] = useContext(Context)
     const [hover, setHover] = useState(true)
     const [numberHover, setNumberHover] = useState(null)
     return (
@@ -16,7 +16,7 @@ function SideBar() {
             </div>
             {/* DESKTOP */}
             {sideBarText.map((item, index) => (
-                <Link className='sm:flex hidden ' key={index} to={item.path}>
+                index < 4 && (<Link className='sm:flex hidden ' key={index} to={item.path}>
                     <div onMouseOver={() => { setHover(true), setNumberHover(index) }} onMouseLeave={() => setHover(false)} onClick={() => setNumber(index)} className='relative z-[2] sm:flex hidden transitions-all  items-center gap-[1.5rem] cursor-pointer'>
                         <div className={` main--border w-7 h-7 cursor-pointer text-[.7em] cursor- flex justify-center items-center rounded-full transition-all ${(numberHover == index && hover) && 'active'} ${number == index ? 'active' : 'active-hover natural-500--text'}`}>
                             <span >{item.number}</span>
@@ -26,20 +26,20 @@ function SideBar() {
                             <h2 className='ubuntu--bold natural-500--text text-[.8em]'>{item.heading}</h2>
                         </div>
                     </div>
-                </Link>
+                </Link>)
 
             ))}
             {/* MOBILE */}
             <div className='flex sm'>
                 {sideBarText.map((item, index) => (
-                    <Link className='' key={index} to={item.path}>
+                    index < 4 && (<Link className='' key={index} to={item.path}>
                         <div onMouseOver={() => { setHover(true), setNumberHover(index) }} onMouseLeave={() => setHover(false)} onClick={() => setNumber(index)} key={index} className='
                     sm:hidden relative transitions-all pl-[1.5rem] flex items-center justify-center gap-[1.5rem] cursor-pointer'>
                             <div className={` main--border w-7 h-7 cursor-pointer text-[.7em] cursor- flex justify-center items-center rounded-full transition-all ${(numberHover == index && hover) && 'active'} ${number == index ? 'active' : 'active-hover natural-500--text'}`}>
                                 <span >{item.number}</span>
                             </div>
                         </div>
-                    </Link>
+                    </Link>)
                 ))}
             </div>
         </div >

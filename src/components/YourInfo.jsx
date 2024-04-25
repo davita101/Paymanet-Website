@@ -4,7 +4,7 @@ import { Context } from './Hero';
 import { Button } from './index';
 
 function YourInfo() {
-    let [number, setNumber, submitEr, setSubmitEr] = useContext(Context);
+    let [summary1, setSummary1, summary, setSummary, switcher, setSwitcher, number, setNumber, submitEr, setSubmitEr] = useContext(Context);
 
     const [formData, setFormData] = useState(() => {
         const savedFormData = localStorage.getItem('formData');
@@ -21,10 +21,11 @@ function YourInfo() {
         localStorage.setItem('formData', JSON.stringify(formData));
         const isCorrectForm = formData.name && formData.email && formData.number
         setSubmitEr(isCorrectForm)
+        window.Element
     }, [formData, setSubmitEr]);
     console.log(submitEr)
     return (
-        <div className='sm:p-0 p-[1rem]  w-full flex flex-col  justify-center'>
+        <div className='sm:p-0 p-[1rem] sm:shadow-none shadow-md  w-full flex flex-col  justify-center'>
             <h2 className='header--hero'>{yourInfoText[0].heading}</h2>
             <p className='paragraph--hero'>{yourInfoText[0].paragraph}</p>
             <div className='mt-[1rem]' />
@@ -52,7 +53,6 @@ function YourInfo() {
                                 name={item.name}
                                 value={formData[item.name] || ''}
                                 maxLength={30}
-                                max={16}
                                 placeholder={item.placeholder}
                                 id={`y${item.name}`}
                                 autoComplete='off'
