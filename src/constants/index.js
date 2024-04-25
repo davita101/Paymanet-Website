@@ -5,35 +5,35 @@ export const sideBarText = [
         number: 1,
         step: 'step 1',
         heading: 'YOUR INFO',
-        path: '/Payment-Website/'
+        path: '/'
     },
     {
         index: 1,
         number: 2,
         step: 'step 2',
         heading: 'SELECT PLAN',
-        path: '/Payment-Website/selectPlans'
+        path: '/selectPlans'
     },
     {
         index: 2,
         number: 3,
         step: 'step 3',
         heading: 'ADD-ONS',
-        path: '/Payment-Website/addons'
+        path: '/addons'
     },
     {
         index: 3,
         number: 4,
         step: 'step 4',
         heading: 'SUMMARY',
-        path: '/Payment-Website/summary'
+        path: '/summary'
     },
     {
         index: 3,
         number: 4,
         step: 'step 4',
         heading: 'SUMMARY',
-        path: '/Payment-Website/confirm'
+        path: '/confirm'
     }
 
 ]

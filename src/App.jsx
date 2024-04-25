@@ -1,7 +1,10 @@
+import { BrowserRouter } from "react-router-dom"
 import { Hero } from "./components"
 function App() {
   return (
-    <Hero />
+    <BrowserRouter>
+      <Hero />
+    </BrowserRouter>
   )
 }
 
