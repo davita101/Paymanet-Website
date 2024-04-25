@@ -3,7 +3,7 @@ import { SideBar, AddOns, SelectPlan, Summary, YourInfo, Confirm } from '.'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import { sideBarText } from '../constants'
 export const Context = React.createContext()
-function Container() {
+function Hero() {
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -42,11 +42,11 @@ function Container() {
                 <SideBar />
                 <div className='relative natural-500--bg sm:h-[24rem] h-[auto] sm:w-[25rem] w-full rounded-xl flex justify-center items-center sm:pb-[4rem] p-0'>
                     <Routes>
-                        <Route path='/' exeat element={<YourInfo />} />
-                        <Route path='/selectPlans' element={<SelectPlan />} />
-                        <Route path='/addons' element={<AddOns />} />
-                        <Route path='/summary' element={<Summary />} />
-                        <Route path='/confirm' element={<Confirm />} />
+                        <Route path='/Payment-Website/' exeat element={<YourInfo />} />
+                        <Route path='/Payment-Website/selectPlans' element={<SelectPlan />} />
+                        <Route path='/Payment-Website/addons' element={<AddOns />} />
+                        <Route path='/Payment-Website/summary' element={<Summary />} />
+                        <Route path='/Payment-Website/confirm' element={<Confirm />} />
                     </Routes>
                 </div>
 
@@ -55,4 +55,4 @@ function Container() {
     )
 }
 
-export default Container
+export default Hero
