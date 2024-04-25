@@ -24,11 +24,11 @@ function Button(props) {
                             className=' ubuntu--bold font-bold transition-all natural-200--text hover:text-blue-900 ' >Go Back</button>
                     </Link>)}
                 {<div />}
-                <Link onClick={() => setNumber(number + 1)}
-                    to={submitEr ? (sideBarText[number + 1]?.path) : '/summary'}>
+                <Link onClick={() => submitEr ? setNumber(number + 1) : setNumber(0)}
+                    to={submitEr ? (sideBarText[number + 1]?.path) : '/'}>
                     <button
                         type='submit'
-                        onClick={() => setNumber((submitEr && number + 1))}
+                        onClick={() => setNumber(!submitEr ? number + 1 : 0)}
                         className=' next--btn' >{`${number < 3 ? 'Next Step' : 'Confirm'}`}</button>
                 </Link>
             </div>

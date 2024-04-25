@@ -11,7 +11,7 @@ function Container() {
     }, [])
 
     let [number, setNumber] = useState(0)
-    let [submitEr, setSubmitEr] = useState(undefined)
+    let [submitEr, setSubmitEr] = useState(false)
     const [switcher, setSwitcher] = useState(false);
 
 
