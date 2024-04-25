@@ -7,7 +7,7 @@ function Container() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        navigate('/addons')
+        navigate('/')
     }, [])
 
     let [number, setNumber] = useState(0)
