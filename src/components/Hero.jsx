@@ -7,7 +7,7 @@ function Hero() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        navigate('/')
+        navigate('/Payment-Website/')
     }, [])
 
     let [number, setNumber] = useState(0)

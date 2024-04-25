@@ -25,7 +25,7 @@ function Button(props) {
                     </Link>)}
                 {<div />}
                 <Link onClick={() => submitEr ? setNumber(number + 1) : setNumber(0)}
-                    to={submitEr ? (sideBarText[number + 1]?.path) : '/'}>
+                    to={submitEr ? (sideBarText[number + 1]?.path) : sideBarText[0].path}>
                     <button
                         type='submit'
                         onClick={() => setNumber(!submitEr ? number + 1 : 0)}

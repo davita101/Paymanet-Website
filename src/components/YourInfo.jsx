@@ -38,12 +38,13 @@ function YourInfo() {
                                     className='primary-100--text font-bold text-[.8em]' htmlFor={item.name}>
                                     {item.label}
                                 </label>
-                                {(item.type === 'email' || !formData[item.type].includes('@')) && !formData[item.type].length > 0 && (
-                                    <label
-                                        className='primary-600--text font-bold text-[.8em] ' htmlFor={`red${item.name}`}>
-                                        {item.redLine}
-                                    </label>
-                                )}
+                                {(item.type === 'email' || !formData[item.type] || !formData[item.type].includes('@')) && !(formData[item.type] && formData[item.type].length > 0)
+                                    && (
+                                        <label
+                                            className='primary-600--text font-bold text-[.8em] ' htmlFor={`red${item.name}`}>
+                                            {item.redLine}
+                                        </label>
+                                    )}
                             </div>
                             <div className='my-[.2rem]' />
                             <input
