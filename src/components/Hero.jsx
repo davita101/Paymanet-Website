@@ -38,15 +38,15 @@ function Hero() {
     console.log(summary, summary1)
     return (
         <Context.Provider value={[summary1, setSummary1, summary, setSummary, switcher, setSwitcher, number, setNumber, submitEr, setSubmitEr]}>
-            <div className={`flex sm:flex-row sm:b flex-col sm:justify-center items-center sm:w-[auto] w-[100vw] sm:h-[auto]  h-[100vh] rounded-xl md:gap-[4rem] sm:gap-[2rem] gap-0 sm:bg-white natural-300--bg p-[1rem]   sm:p-[1rem]`}>
+            <div className={`hover:opacity-[1] transition-all flex sm:flex-row sm:b flex-col sm:justify-center items-center sm:w-[auto] w-[100vw] sm:h-[auto]  h-[100vh] rounded-xl md:gap-[4rem] sm:gap-[2rem] gap-0 sm:bg-white natural-300--bg p-[1rem]   sm:p-[1rem]`}>
                 <SideBar />
                 <div className='relative natural-500--bg sm:h-[24rem] h-[auto] sm:w-[25rem] w-full rounded-xl flex justify-center items-center sm:pb-[4rem] p-0'>
                     <Routes>
                         <Route path='/Payment-Website/' exeat element={<YourInfo />} />
-                        <Route path='/Payment-Website/selectPlans' exeat element={<SelectPlan />} />
-                        <Route path='/Payment-Website/addons' exeat element={<AddOns />} />
-                        <Route path='/Payment-Website/summary' exeat element={<Summary />} />
-                        <Route path='/Payment-Website/confirm' exeat element={<Confirm />} />
+                        <Route path='/Payment-Website/selectPlans' element={<SelectPlan />} />
+                        <Route path='/Payment-Website/addons' element={<AddOns />} />
+                        <Route path='/Payment-Website/summary' element={<Summary />} />
+                        <Route path='/Payment-Website/confirm' element={<Confirm />} />
                     </Routes>
                 </div>
 
