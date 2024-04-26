@@ -37,7 +37,7 @@ function YourInfo() {
                                     className='primary-100--text font-bold text-[.8em]' htmlFor={item.name}>
                                     {item.label}
                                 </label>
-                                {(item.type == 'email' ? (!formData['email'].includes('@') || !formData.email.includes('gmail.com')) && formData['email'].length > 0 : !formData[item.type] > 0)
+                                {(item.type == 'email' ? (!formData['email'].includes('@') || !formData.email.includes('gmail.com')) || !formData['email'].length > 0 : !formData[item.type] > 0)
                                     && (
                                         <label
                                             className='primary-600--text font-bold text-[.8em] ' htmlFor={`red${item.name}`}>
