@@ -19,14 +19,13 @@ function YourInfo() {
 
     useEffect(() => {
         localStorage.setItem('formData', JSON.stringify(formData));
-        const isCorrectForm = formData.name && formData.email && formData.number
+        const isCorrectForm = formData.name && (formData.email.includes('@') && formData.email.includes('gmail.com')) && formData.number
         setSubmitEr(isCorrectForm)
-        window.Element
     }, [formData, setSubmitEr]);
     console.log(submitEr)
     return (
         <div className='sm:p-0 p-[1rem] sm:shadow-none shadow-md  w-full flex flex-col  justify-center'>
-            <h2 className='header--hero'>{yourInfoText[0].heading}</h2>
+            <h1 className='header--hero'>{yourInfoText[0].heading}</h1>
             <p className='paragraph--hero'>{yourInfoText[0].paragraph}</p>
             <div className='mt-[1rem]' />
             <form className='flex flex-col gap-[.6rem]'>
@@ -38,7 +37,7 @@ function YourInfo() {
                                     className='primary-100--text font-bold text-[.8em]' htmlFor={item.name}>
                                     {item.label}
                                 </label>
-                                {(item.type === 'email' || !formData[item.type] || !formData[item.type].includes('@')) && !(formData[item.type] && formData[item.type].length > 0)
+                                {(item.type == 'email' ? (!formData['email'].includes('@') || !formData.email.includes('gmail.com')) && formData['email'].length > 0 : !formData[item.type] > 0)
                                     && (
                                         <label
                                             className='primary-600--text font-bold text-[.8em] ' htmlFor={`red${item.name}`}>
@@ -64,7 +63,7 @@ function YourInfo() {
                     )
                 ))}
 
-                <Button submitEr={submitEr}>Submit</Button>
+                <Button />
             </form>
         </div>
     );
