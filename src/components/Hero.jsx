@@ -38,7 +38,7 @@ function Hero() {
     console.log(summary, summary1)
     return (
         <Context.Provider value={[summary1, setSummary1, summary, setSummary, switcher, setSwitcher, number, setNumber, submitEr, setSubmitEr]}>
-            <div className={`hover:opacity-[1] transition-all flex sm:flex-row sm:b flex-col sm:justify-center items-center sm:w-[auto] w-[100vw] sm:h-[auto]  h-[100vh] rounded-xl md:gap-[4rem] sm:gap-[2rem] gap-0 sm:bg-white natural-300--bg p-[1rem]   sm:p-[1rem]`}>
+            <div className={`flex sm:flex-row sm:b flex-col sm:justify-center items-center sm:w-[auto] w-[100vw] sm:h-[auto]  h-[100vh] rounded-xl md:gap-[4rem] sm:gap-[2rem] gap-0 sm:bg-white natural-300--bg p-[1rem]   sm:p-[1rem]`}>
                 <SideBar />
                 <div className='relative natural-500--bg sm:h-[24rem] h-[auto] sm:w-[25rem] w-full rounded-xl flex justify-center items-center sm:pb-[4rem] p-0'>
                     <Routes>

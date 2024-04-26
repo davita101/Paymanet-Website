@@ -15,7 +15,9 @@
     font-family: 'Ubuntu-Regular';
     src: url(./assets/fonts/Ubuntu-Regular.ttf);
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* --------------------------- Util ------------------------- */
 /* fonts */
 .header--hero--bold{
