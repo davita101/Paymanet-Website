@@ -10,7 +10,6 @@ function YourInfo() {
 
     const [formData, setFormData] = useState(() => {
         try {
-            setTester(true)
             const savedFormData = localStorage.getItem('formData');
             return savedFormData ? JSON.parse(savedFormData) : {};
 
@@ -27,9 +26,10 @@ function YourInfo() {
 
     useEffect(() => {
         localStorage.setItem('formData', JSON.stringify(formData));
-        const isCorrectForm = formData.name && tester && (formData.email.includes('@') && formData.email.includes('gmail.com')) && formData.number
+        const isCorrectForm = formData.name && (formData.email.includes('@') && formData.email.includes('gmail.com')) && formData.number
         setSubmitEr(isCorrectForm)
     }, [formData, setSubmitEr]);
+    console.log(formData.name !== undefined)
     return (
         <div className='sm:p-0 p-[1rem] sm:shadow-none shadow-md  w-full flex flex-col  justify-center'>
             <h1 className='header--hero'>{yourInfoText[0].heading}</h1>
@@ -44,7 +44,7 @@ function YourInfo() {
                                     className='primary-100--text font-bold text-[.8em]' htmlFor={item.name}>
                                     {item.label}
                                 </label>
-                                {(!submitEr && (item.type == 'email' ? (!formData['email'].includes('@') || !formData.email.includes('gmail.com')) || !formData['email'].length > 0 : !formData[item.type] > 0))
+                                {((submitEr || formData[item.type] !== undefined) && (item.type == 'email' ? (!formData['email'].includes('@') || !formData.email.includes('gmail.com')) || !formData['email'].length > 0 : !formData[item.type] > 0))
                                     && (
                                         <label
                                             className='primary-600--text font-bold text-[.8em] ' htmlFor={`red${item.name}`}>
