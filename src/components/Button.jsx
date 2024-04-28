@@ -5,11 +5,8 @@ import { sideBarText } from '../constants'
 
 function Button(props) {
     let [summary1, setSummary1, summary, setSummary, switcher, setSwitcher, number, setNumber, submitEr, setSubmitEr] = useContext(Context)
-    console.log(number)
     const [click, setClick] = useState(0)
-    console.log(sideBarText[1].path)
 
-    console.log(number)
     return (
         <div className='absolute bottom-[-2.5rem] w-full '>
             {/* DESKTOP */}

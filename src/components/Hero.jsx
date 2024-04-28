@@ -16,13 +16,21 @@ function Hero() {
 
 
     const [summary, setSummary] = useState(() => {
-        const storedSummary = localStorage.getItem('summary')
-        return storedSummary ? JSON.parse(storedSummary) : 0
+        try {
+            return JSON.parse(localStorage.getItem('summary')) || 0
+        } catch (error) {
+            console.log('error')
+        }
+
     });
 
     const [summary1, setSummary1] = useState(() => {
-        const storedSummary1 = localStorage.getItem('summary1')
-        return storedSummary1 ? JSON.parse(storedSummary1) : 0
+        try {
+            return JSON.parse(localStorage.getItem('summary1')) || 0
+        } catch (error) {
+            console.log('error')
+        }
+
     });
 
 
@@ -33,9 +41,8 @@ function Hero() {
         if (number == 4) {
             setNumber(3)
         }
-    }, [setSummary, setSummary1, number]);
+    }, [setSummary, setSummary1, number, summary, summary1]);
 
-    console.log(summary, summary1)
     return (
         <Context.Provider value={[summary1, setSummary1, summary, setSummary, switcher, setSwitcher, number, setNumber, submitEr, setSubmitEr]}>
             <div className={`hover:opacity-[1] transition-all flex sm:flex-row sm:b flex-col sm:justify-center items-center sm:w-[auto] w-[100vw] sm:h-[auto]  h-[100vh] rounded-xl md:gap-[4rem] sm:gap-[2rem] gap-0 sm:bg-white natural-300--bg p-[1rem]   sm:p-[1rem]`}>
