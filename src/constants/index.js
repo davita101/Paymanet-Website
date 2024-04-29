@@ -46,21 +46,21 @@ export const yourInfoText = [
         type: 'name',
         name: 'name',
         label: 'Name',
-        redLine: 'Enter Name',
+        redLine: 'This field is required',
         placeholder: 'e.g. Stephen King'
     },
     {
         type: 'email',
         name: 'email',
         label: 'Email Address',
-        redLine: 'Enter full Email',
+        redLine: 'Invalid email address',
         placeholder: 'e.g. stephenking@lorem.com'
     },
     {
         type: 'number',
         name: 'number',
         label: 'Phone Number',
-        redLine: 'Enter full Phone Number ',
+        redLine: 'This field is required',
         placeholder: 'e.g. +1 234 567 890'
     }
 ]

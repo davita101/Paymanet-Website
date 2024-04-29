@@ -24,12 +24,22 @@ function YourInfo() {
         }
     };
 
+    const handleContent = (item, index) => {
+
+        if (!formData[item.type]) {
+            return <label
+                className='primary-600--text font-bold text-[.8em]' htmlFor={item.name}>
+                {item.redLine}
+            </label>
+        }
+    }
+
     useEffect(() => {
         localStorage.setItem('formData', JSON.stringify(formData));
-        const isCorrectForm = formData.name && (formData.email.includes('@') && formData.email.includes('gmail.com')) && formData.number
+        const isCorrectForm = formData.name && formData.email && formData.number
         setSubmitEr(isCorrectForm)
     }, [formData, setSubmitEr]);
-    console.log(formData.name !== undefined)
+    console.log(submitEr)
     return (
         <div className='sm:p-0 p-[1rem] sm:shadow-none shadow-md  w-full flex flex-col  justify-center'>
             <h1 className='header--hero'>{yourInfoText[0].heading}</h1>
@@ -44,13 +54,7 @@ function YourInfo() {
                                     className='primary-100--text font-bold text-[.8em]' htmlFor={item.name}>
                                     {item.label}
                                 </label>
-                                {((submitEr || formData[item.type] !== undefined) && (item.type == 'email' ? (!formData['email'].includes('@') || !formData.email.includes('gmail.com')) || !formData['email'].length > 0 : !formData[item.type] > 0))
-                                    && (
-                                        <label
-                                            className='primary-600--text font-bold text-[.8em] ' htmlFor={`red${item.name}`}>
-                                            {item.redLine}
-                                        </label>
-                                    )}
+                                {handleContent(item, index)}
                             </div>
                             <div className='my-[.2rem]' />
                             <input
